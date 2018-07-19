@@ -3,6 +3,8 @@
 % This is also Ruozhen Gu's assignment submission for Matlab class at Kyoto
 % University. 
 
+recognize_kanji = 0;
+
 %{
 General Ideas of Logic:
 
@@ -213,7 +215,7 @@ imwrite(img_plate, './Plate_to_seperate.jpg')
 img_plate = imread('./Plate_to_seperate.jpg');
 
 %------------------------ Seperate the Numbers ----------------------------
-img_p_bw = rgb2gray(img_plate);    % RGBպ?�??�??�պ?�
+img_p_bw = rgb2gray(img_plate);    % RGBÕº?Ò??ª??»Õº?Ò
 figure('name','Examine distribution of numbers only')
 subplot(3, 2, 1);
 imshow(img_p_bw);
@@ -432,7 +434,7 @@ imwrite(word7,'7.jpg');
 % -------------------------------------------------------------------------
 % -------------- Find img in database anc compare -------------------------
 
-code=char(['0':'9' 'A':'Z' 'abcde']);
+code=char(['0':'9' 'A':'Z' '沪鲁苏贵陕']);
 
 % 1-10 is number; 11 -36 is letters; 37-41 is chinese characters
 % -------------------------------------------------------------------------
@@ -440,19 +442,29 @@ code=char(['0':'9' 'A':'Z' 'abcde']);
 % Warning: depending on your computer, chinese character might be read as ?
 %  so here we will ignore detecting the first chinese character in case you
 %  get an error; However, detecting chinese character is no different from
-%  detecting number or letters.
+%  detecting number or letters. Change it back by setting variable "recognize_kanji" to 1
 
 % -------------------------------------------------------------------------
  subBw2 = zeros(40, 20);
  num = 1; 
  
- for i = 2:7
+ for i = 1:7
+    if recognize_kanji == 0
+        if i == 1
+            continue;
+        end
+    end
     i_str = int2str(i);    
     word = imread([i_str,'.jpg']); 
     segBw2 = imresize(word, [40,20], 'nearest');  %resize
     segBw2 = im2bw(segBw2, 0.5);
     
-    
+    if recognize_kanji == 1
+        if i == 1
+            KMin = 37
+            KMax = 44
+        end
+    end
     if i == 2  % detect second letters A-Z
         kMin = 11;
         kMax = 36;
