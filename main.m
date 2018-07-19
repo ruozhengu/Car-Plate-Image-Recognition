@@ -3,8 +3,6 @@
 % This is also Ruozhen Gu's assignment submission for Matlab class at Kyoto
 % University. 
 
-recognize_kanji = 0;
-
 %{
 General Ideas of Logic:
 
@@ -47,7 +45,9 @@ General Ideas of Logic:
 clear;
 close all;
 clc;
-
+% -------- whether to detect the fist kanji --------------------------------
+recognize_kanji = 0;
+% --------------------------------------------------------------------------
 % Read in the target image for detection
 % Target plate is the image we will process later
 % use img to get the image
