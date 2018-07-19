@@ -3,7 +3,7 @@ Recognize the plate numbers with computer vision and image processing techniques
 
 Please run the function main.m to detect and process input images. By changing the path to different input photos from folder "Plate Number", you can recognize different plates for testing. 
 
-As for some computer, chinese characters cannot be properly displayed, so this function for now recognize the plate characters from the second digit (ignore the chinese character). However, you can set it back by changing the loop conditions from 2:7 to 1:7 near line 449. The logic of recognizing the chinese characters is the same as doing it for letters & numbers.
+As for some computer, chinese characters cannot be properly displayed, so this function for now recognize the plate characters from the second digit (ignore the chinese character). However, to detect chinese character, you can set the variable at line 49 to 1 (this may result in error if your computer does not recongize chinese character though). The logic of recognizing the chinese characters is the same as doing it for letters & numbers.
 
 Summary of steps:
 
