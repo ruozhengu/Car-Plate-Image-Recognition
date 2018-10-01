@@ -1,7 +1,6 @@
 % The following program is a image recognition application for 
 %  car plate detection. 
-% This is also Ruozhen Gu's assignment submission for Matlab class at Kyoto
-% University. 
+
 
 %{
 General Ideas of Logic:
