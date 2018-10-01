@@ -19,21 +19,13 @@ General Ideas of Logic:
 %}  
 
 % Special Notices:
-% 1. For privacy sensitivity concern in Japan and North America, 
+% For privacy sensitivity concern in Japan and North America, 
 % the training data and testing data are achieved using python crawler
 % from Chinese Search Engine "BaiDu". Please contact Gu Ruozhen directly if
 % you have any questions for privacy issue. For simplicity, I only put
 % several images instead of the giant database (on my server) for this
 % assignment submission
-% 2. I first built this program in python before doing it in matlab for
-% assignment. I applied the neral network in python but just for this 
-% assignment, I eliminate that process as I am not a master of Matlab.
-% Another problem with Matlab is about the speed of computation.
-% The time for running is fine for this program but may not be fast enough
-% for more complicated tasks. If that is the case, please contact Gu
-% Ruozhen for another version in C++/C/Python (preferable Python). 
-% 3. Forbidden for private copying and enterprise usage. Please contact Gu
-% Ruozhen for any other program design. Thanks
+
 
 %----------------- start of program --------------------------------------
 
